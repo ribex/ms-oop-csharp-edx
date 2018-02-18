@@ -17,6 +17,8 @@ namespace Module1TutorialLab2
             Car1.Mileage = 5;
 
             Console.WriteLine($"This car is painted {Car1.Color}, was built in {Car1.Year}, and has {Car1.Mileage} miles on it.");
+
+            var Car2 = new Car("Cherry Red", 2008);
         }
     }
 }
