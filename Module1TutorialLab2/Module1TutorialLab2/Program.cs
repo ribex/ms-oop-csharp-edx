@@ -10,6 +10,13 @@ namespace Module1TutorialLab2
     {
         static void Main(string[] args)
         {
+            var Car1 = new Car();
+
+            Car1.Color = "Cool Grey Khaki";
+            Car1.Year = 2018;
+            Car1.Mileage = 5;
+
+            Console.WriteLine($"This car is painted {Car1.Color}, was built in {Car1.Year}, and has {Car1.Mileage} miles on it.");
         }
     }
 }
