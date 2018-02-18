@@ -19,6 +19,10 @@ namespace Module1TutorialLab2
             Console.WriteLine($"This car is painted {Car1.Color}, was built in {Car1.Year}, and has {Car1.Mileage} miles on it.");
 
             var Car2 = new Car("Cherry Red", 2008);
+
+            int carCount = Car.CountCars();
+
+            Console.WriteLine($"There are {carCount} cars on inventory right now.");
         }
     }
 }
