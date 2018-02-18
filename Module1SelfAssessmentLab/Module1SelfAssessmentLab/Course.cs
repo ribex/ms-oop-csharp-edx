@@ -1,4 +1,6 @@
-﻿namespace Module1SelfAssessmentLab
+﻿using System.Collections;
+
+namespace Module1SelfAssessmentLab
 {
     public class Course
     {

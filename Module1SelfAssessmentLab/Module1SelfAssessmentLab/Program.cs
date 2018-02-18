@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,9 @@ namespace Module1SelfAssessmentLab
             var course = new Course("Programming with C#");
             degree.Course = course;
 
-            var student1 = new Student("Bob Smiley", 3.4);
-            var student2 = new Student("Mary Madsen", 3.7);
-            var student3 = new Student("Liza Abrahms", 4.0);
+            Student student1 = new Student("Bob Smiley", 3.4);
+            Student student2 = new Student("Mary Madsen", 3.7);
+            Student student3 = new Student("Liza Abrahms", 4.0);
 
             var sArray = new Student[3];
             sArray[0] = student1;
@@ -28,8 +29,8 @@ namespace Module1SelfAssessmentLab
 
             course.Students = sArray;
 
-            var teacher1 = new Teacher("Charles Borklee", false);
-            var teacher2 = new Teacher("Amanda Vines", true);
+            Teacher teacher1 = new Teacher("Charles Borklee", false);
+            Teacher teacher2 = new Teacher("Amanda Vines", true);
 
             var tArray = new Teacher[2];
             tArray[0] = teacher1;
