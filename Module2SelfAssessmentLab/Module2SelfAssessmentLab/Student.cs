@@ -1,4 +1,6 @@
-﻿namespace Module2SelfAssessmentLab
+﻿using System;
+
+namespace Module2SelfAssessmentLab
 {
     public class Student : Person
     {
@@ -16,6 +18,11 @@
         {
             this.Gpa = gpa;
             studentCount++;
+        }
+
+        public void TakeTest(string test)
+        {
+            Console.WriteLine("The test named " + test + " has been taken.");
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Module2SelfAssessmentLab
+﻿using System;
+
+namespace Module2SelfAssessmentLab
 {
     public class Teacher : Person
     {
@@ -16,6 +18,11 @@
         {
             this.Tenured = tenured;
             teacherCount++;
+        }
+
+        public void GradeTest(string test)
+        {
+            Console.WriteLine("The test named " + test + " has been graded.");
         }
     }
 }
