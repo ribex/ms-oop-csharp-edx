@@ -31,7 +31,7 @@ namespace Module3SelfAssessmentLab
 
             Teacher teacher1 = new Teacher("Charles Borklee", 45, "Smithfield", false);
             Teacher teacher2 = new Teacher("Amanda Vines", 65, "Barrington", true);
-            Teacher teacher3 = new Teacher("BAmanda BVines", 65, "Barrington", true);
+            Teacher teacher3 = new Teacher("Scarlet Heinz", 57, "Riverside", true);
 
             var tArray = new Teacher[3];
             tArray[0] = teacher1;
@@ -44,17 +44,23 @@ namespace Module3SelfAssessmentLab
             Console.WriteLine($"The {degree.Name} currently contains the {course.Name} course.");
             Console.WriteLine($"There are {Student.studentCount} students currently enrolled.");
 
-
-
             foreach (var teacher in tArray)
             {
-                string name = teacher.Name;
-                File.WriteAllText("teacher.txt", name);
-
+                teacher.WriteData(@"C:\Users\Rebecca\source\repos\ms-oop-csharp-edx\Module3SelfAssessmentLab\Module3SelfAssessmentLab\bin\Debug\teachers.txt");
+                if (teacher != null)
+                {
+                    teacher.Dispose();
+                }
             }
-            
 
-
+            foreach (var student in sArray)
+            {
+                student.WriteData(@"C:\Users\Rebecca\source\repos\ms-oop-csharp-edx\Module3SelfAssessmentLab\Module3SelfAssessmentLab\bin\Debug\students.txt");
+                if (student != null)
+                {
+                    student.Dispose();
+                }
+            }
         }
     }
 }

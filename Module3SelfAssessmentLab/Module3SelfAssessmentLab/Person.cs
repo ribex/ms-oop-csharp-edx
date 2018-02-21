@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
 
@@ -32,6 +33,7 @@ namespace Module3SelfAssessmentLab
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         public string Name
@@ -58,5 +60,25 @@ namespace Module3SelfAssessmentLab
             this.Age = age;
             this.CityOfResidence = cityOfResidence;
         }
+
+        public void WriteData(string path)
+        {
+            if (this.disposed)
+            {
+                throw new ObjectDisposedException("Person");
+            }
+
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+            }
+
+            TextWriter tw = new StreamWriter(path, true);
+
+            tw.WriteLine($"{this.Name} is from {this.CityOfResidence} and is {this.Age} years old.");
+
+            tw.Close();
+        }
+
     }
 }
